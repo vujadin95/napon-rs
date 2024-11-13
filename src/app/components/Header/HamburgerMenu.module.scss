@@ -1,0 +1,44 @@
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 6px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+
+.hamburgerMenu > span {
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  transition: all 0.15s ease-in-out;
+}
+
+.hamburgerMenu .line2 {
+  width: 80%;
+  align-self: flex-start;
+}
+
+.active {
+  background-color: red;
+  border-radius: 50%;
+  & .line1 {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  & .line2 {
+    width: 0;
+  }
+  & .line3 {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+@media screen and (width >= 768px) {
+  .hamburgerMenu {
+    display: none;
+  }
+}
